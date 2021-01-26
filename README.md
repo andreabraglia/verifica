@@ -1,7 +1,7 @@
 # Informazioni utili
 
 ## Far partire il server
-> - Aprire il file _start.bat_ e copiarne il contenuto
+> - Aprire il file _start.bat_ e copiarne il contenuto ( ```npm i; npm i -g nodemon; npm run dev``` )
 > - Aprire un terminale nella cartella del progetto (click destro dentro la cartella e cliccare _GIT Bash Here_)
 > - Incollare il contenuto di _start.bat_
 
