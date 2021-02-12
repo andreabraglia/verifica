@@ -1,6 +1,7 @@
 echo @off
 cls
 echo "Ciao Love!!!"
-npm i --silent
-npm i -g nodemon
-npm run dev &
+call npm i --silent
+call npm i -g nodemon
+call npm run dev
+pause

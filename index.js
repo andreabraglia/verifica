@@ -4,19 +4,22 @@ const express = require("express"); const app = new express(); app.use(express.j
 
 
 // INSERISCI IL NOME!!!!!!!!!
-const nome = "inserisci il tuo nome", cognome = "inserisci il tuo cognome" // INSERISCI IL NOME!!!!!!!!!
+const nome = "inserisci il tuo nome"
+const cognome = "inserisci il tuo cognome"
 // INSERISCI IL NOME!!!!!!!!!
 
 
 // NON CANCELLARE QUESTA RIGHE
-if (nome === "inserisci il tuo nome" || cognome === "inserisci il tuo cognome") { return console.log("inserisci nome e cognome tra le virgolette a riga 6 e 7") }
+if (nome === "inserisci il tuo nome" || cognome === "inserisci il tuo cognome") { return console.log("inserisci nome e cognome tra le virgolette a riga 7 e 8") }
 // NON CANCELLARE LE RIGHE PRECEDENTI
 
 // PER ACCREDITARSI USARE QUESTO ENDPOINT
 app.get("/accreditamento", (req, res) => {
-  res.send({
-    nome, cognome
-  })
+  if (nome !== "inserisci il tuo nome" && cognome !== "inserisci il tuo cognome") {
+    res.send({
+      nome, cognome
+    })
+  }
 })
 
 // AGGIUNGERE QUI GLI ALTRI ENDPOINT !!!!!!!!!
