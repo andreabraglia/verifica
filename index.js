@@ -1,12 +1,22 @@
-// NON CANCELLARE QUESTE RIGHE
-const express = require("express") // NON CANCELLARE
-const app = new express() // NON CANCELLARE
-app.use(require("body-parser").json()) // NON CANCELLARE
+// NON CANCELLARE QUESTA RIGHE
+const express = require("express"); const app = new express(); app.use(express.json())
+// NON CANCELLARE LE RIGHE PRECEDENTI
+
+
+// INSERISCI IL NOME!!!!!!!!!
+const nome = "inserisci il tuo nome", cognome = "inserisci il tuo cognome" // INSERISCI IL NOME!!!!!!!!!
+// INSERISCI IL NOME!!!!!!!!!
+
+
+// NON CANCELLARE QUESTA RIGHE
+if (nome === "inserisci il tuo nome" || cognome === "inserisci il tuo cognome") { return console.log("inserisci nome e cognome tra le virgolette a riga 6 e 7") }
 // NON CANCELLARE LE RIGHE PRECEDENTI
 
 // PER ACCREDITARSI USARE QUESTO ENDPOINT
 app.get("/accreditamento", (req, res) => {
-  res.send({ nome: "esempio", cognome: "esempio" })
+  res.send({
+    nome, cognome
+  })
 })
 
 // AGGIUNGERE QUI GLI ALTRI ENDPOINT !!!!!!!!!
