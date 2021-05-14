@@ -69,6 +69,9 @@ INSERT INTO table_name
 VALUES (DEFAULT, value1, value2, value3, ...);
 ```
 ## **JOIN** Syntax
+
+![img](https://www.dofactory.com/img/sql/sql-joins.png)
+
 ### INNER JOIN
 ```
 SELECT column_name(s)
@@ -76,7 +79,6 @@ FROM table1
 INNER JOIN table2
 ON table1.column_name = table2.column_name;
 ```
-![img](https://www.w3schools.com/mysql/img_innerjoin.gif)
 
 ### LEFT JOIN
 ```
@@ -85,7 +87,7 @@ FROM table1
 LEFT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
-![img](https://www.w3schools.com/mysql/img_leftjoin.gif)
+
 ### RIGHT JOIN
 ```
 SELECT column_name(s)
@@ -93,7 +95,13 @@ FROM table1
 RIGHT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
-![img](https://www.w3schools.com/mysql/img_rightjoin.gif)
+### FULL JOIN
+```
+SELECT column_name(s)
+FROM table1
+CROSS JOIN table2;
+```
+
 
 ## **CREATE** Syntax
 ### Creare un DB
