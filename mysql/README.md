@@ -167,9 +167,20 @@ CREATE TABLE Persons (
   LastName varchar(255) NOT NULL,
   FirstName varchar(255),
   Age int,
-  CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
+  CONSTRAINT PK_Person PRIMARY KEY (ID, LastName)
 );
 ```
+oppure
+```sql
+CREATE TABLE Persons (
+  ID int NOT NULL,
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+ 	PRIMARY KEY (ID, last name)
+);
+```
+
 #### FOREIGN KEY
 Foreign key semplice
 ```sql
