@@ -11,7 +11,6 @@ SELECT *
 FROM table_name;
 ```
 
-
 ## **SELECT WHERE** Syntax
 
 Select di alcune colonne (_column1, column2_) con una condizione
@@ -70,6 +69,8 @@ Inserimento con il primo valore lasciato a default per il db
 INSERT INTO table_name
 VALUES (DEFAULT, value1, value2, value3, ...);
 ```
+In questo modo si lascia che il DB scelga un valore di default che deve essere specificato nel momento di creazione della _TABLE_
+
 ## **JOIN** Syntax
 
 ![img](https://www.dofactory.com/img/sql/sql-joins.png)
@@ -119,6 +120,14 @@ CREATE TABLE table_name (
     CONSTRAINT nomeCostraint UNIQUE (column1, column2)
 );
 ```
+### Creare una tabella con un default
+```sql
+CREATE TABLE table_name (
+    column1 INT NOT NULL,
+    column2 VARCHAR(255) DEFAULT "this is a default text" 
+);
+```
+### Constraint
 Constraint inseribili nella stessa linea:
 - `NOT NULL` - Ensures that a column cannot have a NULL value
 - `UNIQUE` - Ensures that all values in a column are different
@@ -127,6 +136,7 @@ Constraint inseribili nella stessa linea:
 - `CHECK` - Ensures that the values in a column satisfies a specific condition
 - `DEFAULT` - Sets a default value for a column if no value is specified
 - `CREATE INDEX` - Used to create and retrieve data from the database very quickly
+
 #### AUTO_INCREMENT
 ```sql
 CREATE TABLE Persons (
@@ -137,6 +147,7 @@ CREATE TABLE Persons (
   PRIMARY KEY (Personid)
 );
 ```
+
 #### PRIMARY KEY
 Primary key semplice
 ```sql
@@ -180,12 +191,14 @@ CREATE TABLE Persons (
   CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
 );
 ```
+
 ## MySQL Types
 ### DATE types
 - `DATE` - format YYYY-MM-DD
 - `DATETIME` - format: YYYY-MM-DD HH:MI:SS
 - `TIMESTAMP` - format: YYYY-MM-DD HH:MI:SS
 - `YEAR` - format YYYY or YY
+
 ### NORMAL types
 - `CHAR(size)`	A FIXED length string (can contain letters, numbers, and special characters). The size parameter specifies the column length in characters - can be from 0 to 255. Default is 1
 - `VARCHAR(size)`	A VARIABLE length string (can contain letters, numbers, and special characters). The size parameter specifies the maximum column length in characters - can be from 0 to 65535
