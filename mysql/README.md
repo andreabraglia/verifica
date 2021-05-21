@@ -205,6 +205,23 @@ CREATE TABLE Persons (
 
 ## MySQL Types
 ### DATE types
+NB: il format utilizzato è “timestamp” YYYY-MM-DD HH:MM:SS”
+```sql
+SELECT * FROM `ordine` where YEAR(dataordine)="YYYY" SELECT * FROM `ordine` where MONTH(dataordine)="MM" 
+```
+
+```sql
+SELECT * FROM `ordine` where DAY(dataordine)="DD"
+```
+
+```sql
+SELECT * FROM `ordine` where HOUR(dataordine)="HH" SELECT * FROM `ordine` where HOUR(dataordine)="HH:MM:SS" SELECT * FROM `ordine` where MINUTE(dataordine)="MM" SELECT * FROM `ordine` where SECOND(dataordine)="SS"
+```
+
+```sql
+SELECT * FROM `ordine` WHERE MONTHNAME(dataordine)="March"
+```
+
 - `DATE` - format YYYY-MM-DD
 - `DATETIME` - format: YYYY-MM-DD HH:MI:SS
 - `TIMESTAMP` - format: YYYY-MM-DD HH:MI:SS
